@@ -51,7 +51,7 @@ export default function TagsPage(){
             page: pageNo
         };
 
-        var url = "http://localhost:5678/tags";
+        var url = "http://44.211.40.0:5678/tags";
         if(input.length === 0){
             return alert("Please Select A Tag")
         }
@@ -87,7 +87,7 @@ export default function TagsPage(){
             uid:uid
         }
 
-        const response = await axios.post('http://localhost:5678/favorites', data);
+        const response = await axios.post('http://44.211.40.0:5678/favorites', data);
         setFavorites([...favoritesList,value]);
 
     }
@@ -129,7 +129,7 @@ export default function TagsPage(){
                 movieID:value
             }
 
-            const response = await axios.post('http://localhost:5678/deleteFavorites', data);
+            const response = await axios.post('http://44.211.40.0:5678/deleteFavorites', data);
 
         }
         setFavorites(favoritesList.filter(item => item !== value));
@@ -174,7 +174,7 @@ export default function TagsPage(){
             genre_ids: tagStr,
             page: pageNo
         };
-        var url = "http://localhost:5678/tags";
+        var url = "http://44.211.40.0:5678/tags";
         
         axios.post(url, data).then((res)=>{
             setLoading(false);
@@ -189,7 +189,7 @@ export default function TagsPage(){
     useEffect(()=>{
        const getFavorites=async ()=>{
         let uid=localStorage.getItem('uid')
-        let res= await axios.get('http://localhost:5678/getFavorites/'+uid)
+        let res= await axios.get('http://44.211.40.0:5678/getFavorites/'+uid)
         let data= res.data.map((movie:any) => movie.movieID);
         console.log(data)
         console.log(res)
