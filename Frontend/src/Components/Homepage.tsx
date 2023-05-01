@@ -53,7 +53,7 @@ let HomePage = () => {
             movieID:value
         }
 
-        const response = await axios.post('http://44.211.151.177:5678/deleteFavorites', data);
+        const response = await axios.post('http://54.161.59.94:5678/deleteFavorites', data);
 
     }
     setFavorites(favoritesList.filter(item => item !== value));
@@ -72,7 +72,7 @@ let HomePage = () => {
         uid:uid
     }
 
-    const response = await axios.post('http://44.211.151.177:5678/favorites', data);
+    const response = await axios.post('http://54.161.59.94:5678/favorites', data);
     setFavorites([...favoritesList,value]);
 
   }
@@ -85,7 +85,7 @@ let HomePage = () => {
 
     const getTop = async () => {
       try {
-        const response = await axios.get('http://44.211.151.177:5678/getTop');
+        const response = await axios.get('http://54.161.59.94:5678/getTop');
         console.log(response.data)
         await setTopMovie(response.data);
         console.log(topMovie); // logs the updated state
@@ -104,7 +104,7 @@ let HomePage = () => {
   useEffect(()=>{
     const getFavorites=async ()=>{
       let uid=localStorage.getItem('uid')
-      let res= await axios.get('http://44.211.151.177:5678/getFavorites/'+uid)
+      let res= await axios.get('http://54.161.59.94:5678/getFavorites/'+uid)
       let data= res.data.map((movie:any) => movie.movieID);
       console.log(data)
       console.log(res)

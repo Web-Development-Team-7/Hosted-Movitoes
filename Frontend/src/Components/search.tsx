@@ -33,7 +33,7 @@ export default function SearchResults() {
     useEffect(() => {
         const getFavorites=async ()=>{
             let uid=localStorage.getItem('uid')
-            let res= await axios.get('http://44.211.151.177:5678/getFavorites/'+uid)
+            let res= await axios.get('http://54.161.59.94:5678/getFavorites/'+uid)
             let data= res.data.map((movie:any) => movie.movieID);
             console.log(data)
             console.log(res)
@@ -44,7 +44,7 @@ export default function SearchResults() {
             console.log(currentURL);
             const result = currentURL.slice(31);
             console.log(result)
-            var url = 'http://44.211.151.177:5678/search/'+result;
+            var url = 'http://54.161.59.94:5678/search/'+result;
             let res=await axios.get(url)
             //var filteredRes = res.data.results.filter(function (movie) { return movie.original_language === 'en' })
             console.log(res.data.results.filter(function (movie:any) { return movie.original_language === 'en' }))
@@ -77,7 +77,7 @@ export default function SearchResults() {
                 movieID:value
             }
     
-            const response = await axios.post('http://44.211.151.177:5678/deleteFavorites', data);
+            const response = await axios.post('http://54.161.59.94:5678/deleteFavorites', data);
     
         }
         setFavorites(favoritesList.filter(item => item !== value));
@@ -105,7 +105,7 @@ export default function SearchResults() {
             uid:uid
         }
     
-        const response = await axios.post('http://44.211.151.177:5678/favorites', data);
+        const response = await axios.post('http://54.161.59.94:5678/favorites', data);
         setFavorites([...favoritesList,value]);
     
       }

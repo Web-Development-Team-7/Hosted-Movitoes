@@ -56,7 +56,7 @@ const Favorite=()=>{
             movieID:value
         }
 
-        const response = await axios.post('http://44.211.151.177:5678/deleteFavorites', data);
+        const response = await axios.post('http://54.161.59.94:5678/deleteFavorites', data);
 
     }
     setFavoritesIDList(favortitesIDList.filter(item => item !== value));
@@ -75,7 +75,7 @@ let postHandler=async (value: number, item:any)=>{
       uid:uid
   }
 
-  const response = await axios.post('http://44.211.151.177:5678/favorites', data);
+  const response = await axios.post('http://54.161.59.94:5678/favorites', data);
   setFavoritesIDList([...favortitesIDList,value]);
 
 }
@@ -98,7 +98,7 @@ function addFavLists(e: React.MouseEvent<HTMLButtonElement>, item:any){
   useEffect(()=>{
     let uid=localStorage.getItem('uid')
     let getFavoriteHandler=async()=>{
-      let res = await axios.get('http://44.211.151.177:5678/getFavorites/'+uid);
+      let res = await axios.get('http://54.161.59.94:5678/getFavorites/'+uid);
       let data:any= []
       let IDList=[]
       res.data.map((movie:any)=>{

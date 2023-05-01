@@ -87,7 +87,7 @@ const movieDetails = {
             function fetchComments(){
                 setLoading(true);
                 console.log(setLoading)
-                const url = 'http://44.211.151.177:5678/comments/'+movieID;
+                const url = 'http://54.161.59.94:5678/comments/'+movieID;
                 axios.get(url).then((res) => {
                     //alert('HI')
                     setComments(res.data);
@@ -126,7 +126,7 @@ const movieDetails = {
         _v: 0
     }
     console.log(payload)
-    var url = 'http://44.211.151.177:5678/comment';
+    var url = 'http://54.161.59.94:5678/comment';
     axios.post(url, payload).then((res) => {
         console.log(x)
         event.target.reset();
@@ -169,12 +169,12 @@ const movieDetails = {
             console.log(currentURL);
             const result = currentURL.slice(33);
             console.log(result)
-            let res=await axios.get('http://44.211.151.177:5678/movies/'+result)
+            let res=await axios.get('http://54.161.59.94:5678/movies/'+result)
             console.log(res)
             setMovie(res.data)
         };
         const getActors=async ()=>{
-            let res=await axios.get('http://44.211.151.177:5678/actors/'+result)
+            let res=await axios.get('http://54.161.59.94:5678/actors/'+result)
             setActors(res.data.split(", "));
             console.log(res.data.split(", "))
         }

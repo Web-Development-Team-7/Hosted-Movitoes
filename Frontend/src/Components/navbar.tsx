@@ -89,7 +89,7 @@ export default function Navbar() {
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter'){
-                      window.location.href = 'http://44.211.151.177:3000/search?q=' + encodeURIComponent(query);
+                      window.location.href = 'http://54.161.59.94:5678/search?q=' + encodeURIComponent(query);
                     }
                     
                   }}
