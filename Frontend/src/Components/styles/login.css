@@ -1,13 +1,13 @@
 #LogFlex{
     align-items: center;
     height: 100vh;
-    background-image: url(Assets/login-bg.jpg);
+    background-image: url(http://44.211.151.177/Assets/login-bg.jpg);
     background-size: 100% 100%;
 }
 #SignFlex{
     align-items: center;
     height: 100vh;
-    background-image: url(Assets/SignUp.jpg);
+    background-image: url(http://44.211.151.177/Assets/SignUp.jpg);
     background-size: 100% 100%;
 }
 #LogForm{

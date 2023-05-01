@@ -211,7 +211,7 @@ export default function AccountPage(){
         <div>
         <Navbar/>
         <div className = 'h-screen justify-center flex'>
-            <img onClick={ChooseImage} id="Accountpfp" alt="User Profile Picture" src={photoURL || 'Assets/pfp.png'} className='h-48 mt-10 w-48 absolute rounded-full'/>
+            <img onClick={ChooseImage} id="Accountpfp" alt="User Profile Picture" src={photoURL || 'http://44.211.151.177/Assets/pfp.png'} className='h-48 mt-10 w-48 absolute rounded-full'/>
             {toggleChoose &&
             <div className=' mt-28 h-1/2 w-1/2 bg-slate-200 flex justify-center z-10 absolute'>
                 <h1 id="ImageExit" onClick={ChooseImage} className="text-2xl font-bold text-black ml-auto mr-2 aboslute">X</h1>

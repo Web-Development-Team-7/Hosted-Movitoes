@@ -103,7 +103,7 @@ export default function Navbar() {
                       <img
                         className="h-8 w-8 rounded-full"
                         /* Make this the pfp of the user */
-                        src={photo || 'Assets/pfp.png'}
+                        src={photo || 'http://44.211.151.177/Assets/pfp.png'}
                         alt=""
                       />
                     </Menu.Button>

@@ -86,7 +86,7 @@ export default function Login(){
                 <input id="Loginput" type = "password" name ="Password" className='bg-slate-200 mt-5 h-10 w-64 rounded-lg text-center'  onChange = {(e) => setPass(e.target.value)} placeholder = "Enter Password"/>
                 <button id="LogButton" onClick={UserSignIn} className='mt-10 bg-blue-500 h-10 w-64 text-center rounded-lg border-solid border-black border text-black text-lg font-500 ' >Log In</button>
                 <button id="GoogleLog" onClick={GoogleSignIn} className = "bg-white rounded-md text-center mt-96 h-10 w-48 font-500 absolute z-10 border-black border border-solid">
-                    <img src = './Assets/google.png' className='h-15 w-8 top-1 absolute' alt='Google Logo'></img>Log In With Google</button>
+                    <img src = 'http://44.211.151.177/Assets/Google.png' className='h-15 w-8 top-1 absolute' alt='Google Logo'></img>Log In With Google</button>
                 <h3 className='mt-20'>Don't Have An Account?
                 <Link to='/Signup' id="LinkSign" className='text-blue-600'>Sign Up!</Link></h3>
             </form>
